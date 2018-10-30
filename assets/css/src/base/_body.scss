@@ -1,0 +1,13 @@
+/**
+
+@body
+--------------------------------------------------------*/
+
+
+
+body {
+    @extend %roboto;
+    @include font-size($font-m);
+    background: $color-extra-light-gray;
+    color: $text-color;
+}

@@ -1,0 +1,48 @@
+/**
+
+@tipography
+--------------------------------------------------------*/
+
+
+
+h1 {
+    @extend %roboto-slab;
+    @include font-size($font-xxxl);
+    color: $color-dark-blue;
+    line-height: rem(38px);
+    margin-bottom: rem($base-unit * 4px);
+}
+
+h2 {
+    @extend %roboto-slab;
+    @include font-size($font-xxl);
+    color: $color-dark-blue-2;
+    line-height: rem(24px);
+    margin-bottom: rem($base-unit * 1px);
+}
+
+h3 {
+    @extend %roboto-slab;
+    @include font-size($font-m);
+    color: $color-medium-blue;
+    line-height: rem(19px);
+    margin-bottom: rem($base-unit * 1.5px);
+}
+
+p {
+    @extend %roboto;
+    @include font-size($font-m);
+    color: $text-color;
+    line-height: rem(20px);
+    margin-bottom: 0.5em;
+}
+
+b,
+strong {
+    font-weight: $text-bold;
+}
+
+i,
+em {
+    font-style: italic;
+}

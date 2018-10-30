@@ -1,0 +1,43 @@
+/**
+
+@mixins
+--------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------
+
+@mixin clearfix
+
+--------------------------------------------------------*/
+
+@mixin clearfix() {
+    zoom: 1;
+    &:before {
+        content: "";
+        display: table;
+    }
+    &:after {
+        content: " ";
+        clear: both;
+        display: table;
+        font-size: 0;
+        height: 0;
+        visibility: hidden;
+    }
+}
+// @include clearfix
+
+
+
+/*--------------------------------------------------------
+
+@mixin fonts-size
+
+--------------------------------------------------------*/
+
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: rem($size);
+}
+// @include font-size(16px);

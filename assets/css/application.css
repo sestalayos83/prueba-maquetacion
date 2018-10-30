@@ -1,4 +1,304 @@
-@import url(lib/normalize.7.0.0.css);
+/*--------------------------------------------------------
+
+@vendors
+    
+    Vendor tools dependencies (Flex Grid Mixins)
+    Google Font
+    Normalize
+
+--------------------------------------------------------*/
+/**
+
+@google_fonts
+--------------------------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab");
+@import url(vendors/normalize.7.0.0.css);
+/*--------------------------------------------------------
+
+@utils
+    
+    Vars
+    Functions
+    Mixins
+
+--------------------------------------------------------*/
+/**
+
+@vars
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
+@sizes vars
+
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
+@tipography vars
+
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
+@colors vars
+
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
+@madiaquery vars
+
+--------------------------------------------------------*/
+/**
+
+@functions
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
+@function rem
+
+--------------------------------------------------------*/
+/**
+
+@mixins
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
+@mixin clearfix
+
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
+@mixin fonts-size
+
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
+@base
+    
+    Reset
+    Fonts
+    Html
+    Body
+    Tipography
+    Layout
+
+--------------------------------------------------------*/
+/**
+
+@reset
+--------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary,
+audio,
+canvas,
+video {
+  display: block; }
+
+/**
+
+@fonts
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
+@font-family: roboto
+
+--------------------------------------------------------*/
+body, p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+/*--------------------------------------------------------
+
+@font-family: roboto-slab
+
+--------------------------------------------------------*/
+h1, h2, h3 {
+  font-family: "Roboto Slab", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+/**
+
+@html
+--------------------------------------------------------*/
+html {
+  font-size: 100%;
+  height: 100%;
+  text-rendering: optimizeLegibility; }
+  @media (max-width: 1024px) {
+    html {
+      font-size: 90%; } }
+
+/**
+
+@body
+--------------------------------------------------------*/
+body {
+  font-size: 14px;
+  font-size: 1rem;
+  background: #fafafa;
+  color: #4e5156; }
+
+/**
+
+@tipography
+--------------------------------------------------------*/
+h1 {
+  font-size: 24px;
+  font-size: 1.71429rem;
+  color: #003970;
+  line-height: 2.71429rem;
+  margin-bottom: 3.42857rem; }
+
+h2 {
+  font-size: 18px;
+  font-size: 1.28571rem;
+  color: #033970;
+  line-height: 1.71429rem;
+  margin-bottom: 0.85714rem; }
+
+h3 {
+  font-size: 14px;
+  font-size: 1rem;
+  color: #3b95ed;
+  line-height: 1.35714rem;
+  margin-bottom: 1.28571rem; }
+
+p {
+  font-size: 14px;
+  font-size: 1rem;
+  color: #4e5156;
+  line-height: 1.42857rem;
+  margin-bottom: 0.5em; }
+
+b,
+strong {
+  font-weight: 700; }
+
+i,
+em {
+  font-style: italic; }
+
+/**
+
+@layout
+--------------------------------------------------------*/
+.row {
+  zoom: 1;
+  width: 100%;
+  clear: both; }
+  .row:before {
+    content: "";
+    display: table; }
+  .row:after {
+    content: " ";
+    clear: both;
+    display: table;
+    font-size: 0;
+    height: 0;
+    visibility: hidden; }
+
+.wrapper {
+  zoom: 1;
+  width: 100%;
+  max-width: 1264px;
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-right: auto;
+  margin-left: auto;
+  clear: both; }
+  .wrapper:before {
+    content: "";
+    display: table; }
+  .wrapper:after {
+    content: " ";
+    clear: both;
+    display: table;
+    font-size: 0;
+    height: 0;
+    visibility: hidden; }
+
+/*--------------------------------------------------------
+
+@blocks
+    
+    Tabs
+    Accordion
+
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
+@helpers
+    
+    Helpers
+
+--------------------------------------------------------*/
+/**
+
+@utils
+--------------------------------------------------------*/
 .hide-on-desktop,
 .responsive-only,
 .tablet-only,
@@ -28,27 +328,3 @@
   .hide-on-responsive,
   .hide-on-mobile {
     display: none !important; } }
-
-.row:before, .wrapper:before, .row:after, .wrapper:after {
-  content: ' ';
-  display: table; }
-
-.row:after, .wrapper:after {
-  clear: both; }
-
-body {
-  padding: 40px;
-  background-color: #fafafa; }
-
-.row {
-  width: 100%;
-  clear: both; }
-
-.wrapper {
-  width: 100%;
-  max-width: 1264px;
-  padding-left: 32px;
-  padding-right: 32px;
-  margin-right: auto;
-  margin-left: auto;
-  clear: both; }

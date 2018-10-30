@@ -1,8 +1,82 @@
 @charset "UTF-8";
 
-@import 'base/vars';
-@import 'base/utils';
+
+
+/*--------------------------------------------------------
+
+@vendors
+    
+    Vendor tools dependencies (Flex Grid Mixins)
+    Google Font
+    Normalize
+
+--------------------------------------------------------*/
+
+@import './node_modules/flexbox-grid-mixins/sass/flexbox-grid-mixins';
+@import "vendors/google_fonts.scss";
+@import 'vendors/normalize.7.0.0.css';
+
+
+
+/*--------------------------------------------------------
+
+@utils
+    
+    Vars
+    Functions
+    Mixins
+
+--------------------------------------------------------*/
+
+@import 'utils/vars';
+@import 'utils/functions';
+@import 'utils/mixins';
+
+
+
+/*--------------------------------------------------------
+
+@base
+    
+    Reset
+    Fonts
+    Html
+    Body
+    Tipography
+    Layout
+
+--------------------------------------------------------*/
+
+
+@import "base/reset";
+@import "base/fonts";
+@import "base/html";
+@import "base/body";
+@import "base/typography";
 @import 'base/layout';
 
-@import 'lib/normalize.7.0.0.css';
-//@import 'blocks/*';
+
+
+/*--------------------------------------------------------
+
+@blocks
+    
+    Tabs
+    Accordion
+
+--------------------------------------------------------*/
+
+//@import 'blocks/tabs.scss';
+//@import 'blocks/accordion.scss';
+
+
+
+/*--------------------------------------------------------
+
+@helpers
+    
+    Helpers
+
+--------------------------------------------------------*/
+
+@import "helpers/helper-classes";

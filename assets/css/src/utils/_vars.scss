@@ -1,0 +1,89 @@
+/**
+
+@vars
+--------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------
+
+@sizes vars
+
+--------------------------------------------------------*/
+
+$base-unit: 12;
+$base-size: 14px;
+
+
+
+/*--------------------------------------------------------
+
+@tipography vars
+
+--------------------------------------------------------*/
+
+// Font-family vars
+$roboto: 'Roboto', sans-serif;
+$roboto-slab: 'Roboto Slab', sans-serif;
+
+
+// Font-size vars
+$font-s: 12px;
+$font-m: 14px;
+$font-l: 15px;
+$font-xl: 16px;
+$font-xxl: 18px;
+$font-xxxl: 24px;
+
+
+// Font-weigth vars
+$text-regular: 400;
+$text-bold: 700;
+
+
+
+/*--------------------------------------------------------
+
+@colors vars
+
+--------------------------------------------------------*/
+
+// Colors
+$color-white: #FFFFFF;
+$color-extra-light-gray: #fafafa;
+$color-light-gray: #64676c;
+$color-gray: #4e5156;
+$color-black: #000000;
+
+$color-light-blue: #4ba7ee; 
+$color-medium-blue: #3b95ed; 
+$color-blue: #105aa3; 
+$color-dark-blue: #003970;
+$color-dark-blue-2: #033970;
+$color-extra-dark-blue: #001841;
+
+$color-yellow: #fac937;
+$color-red: #e82e34;
+
+
+// Base colors
+$color-primary: $color-gray;
+$color-secondary: $color-light-gray; 
+
+
+// Text colors
+$text-color: $color-primary;
+
+
+
+
+/*--------------------------------------------------------
+
+@madiaquery vars
+
+--------------------------------------------------------*/
+
+$mobile: 767px;
+$tablet: 1023px;
+$small-desktop:  1024px;
+$medium-desktop: 1264px;

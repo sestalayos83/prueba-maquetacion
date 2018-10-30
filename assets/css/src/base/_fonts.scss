@@ -1,0 +1,48 @@
+/**
+
+@fonts
+--------------------------------------------------------*/
+
+
+
+/*--------------------------------------------------------
+
+@font-family: roboto
+
+--------------------------------------------------------*/
+
+%roboto {
+    font-family: $roboto;
+    font-weight: $text-regular;
+    font-style: normal; 
+}
+// @extend %roboto;
+
+%roboto--bold {
+    font-family: $roboto;
+    font-weight: $text-bold;
+    font-style: normal; 
+}
+// @extend %roboto--bold;
+
+
+
+/*--------------------------------------------------------
+
+@font-family: roboto-slab
+
+--------------------------------------------------------*/
+
+%roboto-slab {
+    font-family: $roboto-slab;
+    font-weight: $text-regular;
+    font-style: normal; 
+}
+// @extend %roboto-slab;
+
+%roboto-slab--bold {
+    font-family: $roboto-slab;
+    font-weight: $text-bold;
+    font-style: normal; 
+}
+// @extend %roboto-slab--bold;
