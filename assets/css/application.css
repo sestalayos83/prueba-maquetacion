@@ -532,12 +532,21 @@ em {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s;
     border: 1px solid #c9e3f9;
     background-color: #FFFFFF;
     -webkit-border-radius: 2px;
             border-radius: 2px;
     cursor: pointer;
     padding: 20px 18px; }
+    .select-box__container:hover {
+      border-color: #326C96; }
+      .select-box__container:hover .select-box__button {
+        border-color: #326C96; }
+        .select-box__container:hover .select-box__button .radio__label {
+          color: #033970; }
     .select-box__container.selected {
       border-color: #326C96; }
       .select-box__container.selected .select-box__button {
@@ -588,11 +597,10 @@ em {
     border: 1px solid transparent;
     margin-top: auto;
     padding: 14px; }
-    .select-box__button:hover {
-      border-color: #326C96; }
-      .select-box__button:hover .radio__label {
-        color: #033970; }
     .select-box__button .radio__label {
+      -webkit-transition-duration: 0.2s;
+           -o-transition-duration: 0.2s;
+              transition-duration: 0.2s;
       color: #64676c;
       font-size: 16px;
       line-height: 16px;

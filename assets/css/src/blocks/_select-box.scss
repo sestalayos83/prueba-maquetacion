@@ -12,11 +12,26 @@
   // Select-box Container
   &__container {
     @include grid($flex-direction: column);    
+    @include transition($duration: 0.2s);
     border: 1px solid $color-extra-light-blue;
     background-color: $color-white;
     border-radius: 2px;
     cursor: pointer;
     padding: 20px 18px;
+
+    &:hover {
+      border-color: $color-medium-blue-2;
+
+      .select-box {
+        &__button {
+          border-color: $color-medium-blue-2;
+
+          .radio__label {
+            color: $color-dark-blue-2;
+          }
+        }
+      }
+    }
 
     &.selected {
       border-color: $color-medium-blue-2;
@@ -78,15 +93,8 @@
     margin-top: auto;
     padding: 14px;
 
-    &:hover {
-      border-color: $color-medium-blue-2;
-
-      .radio__label {
-        color: $color-dark-blue-2;
-      }
-    }
-
     .radio__label {
+      @include transition($duration: 0.2s);
       color: $color-light-gray;
       font-size: $font-xl;
       line-height: 16px; 
@@ -101,6 +109,5 @@
     +.radio__label {
       color: $color-dark-blue-2;
     }
-
   }
 }
