@@ -1,0 +1,38 @@
+/**
+
+@radio-button
+--------------------------------------------------------*/
+
+
+
+input[type=radio],
+.radio__input {
+  @include transition(0.2s);
+  -webkit-appearance: none;
+  border: 1px solid $color-extra-light-gray-5;
+  background: $color-white;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 16px;
+  outline: none;
+  padding: 8px;
+  position: relative;
+  width: 16px;
+  
+  &:checked {
+    border-color: $color-green;
+    
+    &::before {
+      content: '';
+      background-color: $color-green;
+      border-radius: 50%;
+      height: 10px;
+      left: 3px;
+      padding: 5px;
+      position: absolute;
+      top: 3px;
+      width: 10px;
+    }
+  }
+}
+

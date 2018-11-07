@@ -419,7 +419,7 @@ em {
   -webkit-box-shadow: 0px 1px 2px 0px rgba(80, 92, 119, 0.2);
           box-shadow: 0px 1px 2px 0px rgba(80, 92, 119, 0.2);
   position: relative;
-  z-index: 2; }
+  z-index: 100; }
   .tabs__nav .grid {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -455,13 +455,17 @@ em {
   background-color: #f9f9f9;
   -webkit-border-radius: 2px;
           border-radius: 2px;
-  -webkit-box-shadow: 0px 1px 2px 0px rgba(80, 92, 119, 0.2);
-          box-shadow: 0px 1px 2px 0px rgba(80, 92, 119, 0.2);
   height: 0;
-  opacity: 0; }
+  opacity: 0;
+  overflow: hidden; }
+  .tabs__content:first-of-type {
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(80, 92, 119, 0.2);
+            box-shadow: 0px 1px 2px 0px rgba(80, 92, 119, 0.2); }
   .tabs__content.active {
     height: auto;
-    opacity: 1; }
+    opacity: 1;
+    position: relative;
+    z-index: 10; }
 
 .tabs__title {
   padding: 40px 0;
@@ -516,10 +520,6 @@ em {
       -ms-flex: 0 1 100%;
           flex: 0 1 100%;
   margin: 0 6px 12px; }
-  .select-box input:checked + .select-box__container {
-    border-color: #326C96; }
-    .select-box input:checked + .select-box__container .select-box__button {
-      border-color: #326C96; }
   .select-box__container {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -533,9 +533,17 @@ em {
         -ms-flex-direction: column;
             flex-direction: column;
     border: 1px solid #c9e3f9;
+    background-color: #FFFFFF;
     -webkit-border-radius: 2px;
             border-radius: 2px;
+    cursor: pointer;
     padding: 20px 18px; }
+    .select-box__container.selected {
+      border-color: #326C96; }
+      .select-box__container.selected .select-box__button {
+        border-color: #326C96; }
+  .select-box__content {
+    margin-bottom: 45px; }
   .select-box__title {
     color: #105aa3;
     font-size: 16px;
@@ -555,7 +563,6 @@ em {
   .select-box__list {
     color: #9DA2A9;
     list-style-type: disc;
-    margin-bottom: 45px;
     padding-left: 5px; }
     .select-box__list span {
       color: #001841;
@@ -577,29 +584,58 @@ em {
     -webkit-transition-duration: 0.2s;
          -o-transition-duration: 0.2s;
             transition-duration: 0.2s;
-    background-color: rgba(222, 225, 232, 0.5);
+    background-color: rgba(222, 225, 232, 0.38);
     border: 1px solid transparent;
-    cursor: pointer;
     margin-top: auto;
     padding: 14px; }
-    .select-box__button input {
-      margin-right: 10px; }
-      .select-box__button input:checked + .select-box__text {
-        color: #033970; }
     .select-box__button:hover {
       border-color: #326C96; }
-      .select-box__button:hover .select-box__text {
+      .select-box__button:hover .radio__label {
         color: #033970; }
-  .select-box__text {
-    color: #64676c;
-    font-size: 16px;
-    line-height: 16px;
-    margin: 0; }
+    .select-box__button .radio__label {
+      color: #64676c;
+      font-size: 16px;
+      line-height: 16px;
+      margin-left: 15px; }
+  .select-box__input:checked + .radio__label {
+    color: #033970; }
 
 /**
 
-@input
+@radio-button
 --------------------------------------------------------*/
+input[type=radio],
+.radio__input {
+  -webkit-transition-delay: 0.2s;
+       -o-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+  -webkit-appearance: none;
+  border: 1px solid #8B9199;
+  background: #FFFFFF;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  cursor: pointer;
+  height: 16px;
+  outline: none;
+  padding: 8px;
+  position: relative;
+  width: 16px; }
+  input[type=radio]:checked,
+  .radio__input:checked {
+    border-color: #6DC138; }
+    input[type=radio]:checked::before,
+    .radio__input:checked::before {
+      content: '';
+      background-color: #6DC138;
+      -webkit-border-radius: 50%;
+              border-radius: 50%;
+      height: 10px;
+      left: 3px;
+      padding: 5px;
+      position: absolute;
+      top: 3px;
+      width: 10px; }
+
 /*--------------------------------------------------------
 
 @helpers
