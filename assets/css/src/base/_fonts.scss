@@ -12,16 +12,16 @@
 --------------------------------------------------------*/
 
 %roboto {
-    font-family: $roboto;
-    font-weight: $text-regular;
-    font-style: normal; 
+  font-family: $roboto;
+  font-weight: $text-regular;
+  font-style: normal; 
 }
 // @extend %roboto;
 
 %roboto--bold {
-    font-family: $roboto;
-    font-weight: $text-bold;
-    font-style: normal; 
+  font-family: $roboto;
+  font-weight: $text-bold;
+  font-style: normal; 
 }
 // @extend %roboto--bold;
 
@@ -34,15 +34,15 @@
 --------------------------------------------------------*/
 
 %roboto-slab {
-    font-family: $roboto-slab;
-    font-weight: $text-regular;
-    font-style: normal; 
+  font-family: $roboto-slab;
+  font-weight: $text-regular;
+  font-style: normal; 
 }
 // @extend %roboto-slab;
 
 %roboto-slab--bold {
-    font-family: $roboto-slab;
-    font-weight: $text-bold;
-    font-style: normal; 
+  font-family: $roboto-slab;
+  font-weight: $text-bold;
+  font-style: normal; 
 }
 // @extend %roboto-slab--bold;

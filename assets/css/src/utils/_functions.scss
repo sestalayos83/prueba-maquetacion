@@ -12,7 +12,7 @@
 --------------------------------------------------------*/
 
 @function rem($size) {
-    $rem-size: $size / $base-size;
-    @return $rem-size * 1rem;
+  $rem-size: $size / $base-size;
+  @return $rem-size * 1rem;
 }
 // font-size: rem(20px)

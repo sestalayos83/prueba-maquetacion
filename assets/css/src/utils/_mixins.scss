@@ -12,19 +12,19 @@
 --------------------------------------------------------*/
 
 @mixin clearfix() {
-    zoom: 1;
-    &:before {
-        content: "";
-        display: table;
-    }
-    &:after {
-        content: " ";
-        clear: both;
-        display: table;
-        font-size: 0;
-        height: 0;
-        visibility: hidden;
-    }
+  zoom: 1;
+  &:before {
+    content: "";
+    display: table;
+  }
+  &:after {
+    content: " ";
+    clear: both;
+    display: table;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
 }
 // @include clearfix
 
@@ -37,7 +37,50 @@
 --------------------------------------------------------*/
 
 @mixin font-size($size) {
-    font-size: $size;
-    font-size: rem($size);
+  font-size: $size;
+  font-size: rem($size);
 }
 // @include font-size(16px);
+
+
+
+/*--------------------------------------------------------
+
+@mixin transition
+
+--------------------------------------------------------*/
+
+@mixin transition($delay: null, $duration: null, $property: null, $timing-function: null) {
+
+  @if $delay {
+    transition-delay: $delay;
+  }
+
+  @if $duration {
+    transition-duration: $duration;
+  }
+
+  @if $property {
+    transition-property: $property;
+  }
+
+  @if $timing-function {
+    transition-timing-function: $timing-function;
+  }
+}
+// @include transition($delay:2s);
+
+
+
+/*--------------------------------------------------------
+
+@mixin media
+
+--------------------------------------------------------*/
+
+@mixin media($breakpoint) {
+  @media only screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+//@include media($mobile)
