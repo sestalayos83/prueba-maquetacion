@@ -1,0 +1,102 @@
+/**
+
+@select-box
+--------------------------------------------------------*/
+
+
+   
+.select-box {
+  @include grid();
+  @include grid-col($gutter: 12px, $flex-basis: 100%);
+
+  input:checked {
+    +.select-box__container {
+      border-color: $color-medium-blue-2;
+
+      .select-box__button {
+        border-color: $color-medium-blue-2;
+      }
+    }
+
+  }
+
+  &__container {
+    @include grid($flex-direction: column);    
+    border: 1px solid $color-extra-light-blue;
+    border-radius: 2px;
+    padding: 20px 18px;
+  }
+  
+  // Select-box Title
+  &__title {
+    @extend %roboto--bold;
+    color: $color-blue;
+    font-size: $font-xl;
+    line-height: 16px;
+    padding-bottom: 24px;
+    position: relative;
+    text-align: center;
+
+    &::before {
+      content: '';
+      background-color: $color-extra-light-blue;
+      bottom: 0;
+      height: 2px;
+      left: 50%;
+      margin-left: -36px;
+      position: absolute;
+      width: 72px;
+    }
+  }
+
+  // Select-box List
+  &__list {
+    color: $color-extra-light-gray-4;
+    list-style-type: disc;
+    margin-bottom: 45px;
+    padding-left: 5px;
+
+    span {
+      color: $color-extra-dark-blue;
+      display: block;
+      font-size: $font-l;
+      line-height: 17px;
+      margin-bottom: 8px;
+    }
+  }
+
+  // Select-box button
+  &__button {
+    @include grid($align-items: center);
+    @include transition($duration: 0.2s);
+    background-color: rgba(222,225,232,0.5);
+    border: 1px solid transparent;
+    cursor: pointer;
+    margin-top: auto;
+    padding: 14px;
+    
+    input {
+      margin-right: 10px;
+
+      &:checked + .select-box__text {
+        color: $color-dark-blue-2;
+      }
+    }
+
+    &:hover {
+      border-color: $color-medium-blue-2;
+
+      .select-box__text {
+        color: $color-dark-blue-2;
+      }
+    }
+  }
+
+  &__text {
+    color: $color-light-gray;
+    font-size: $font-xl;
+    line-height: 16px; 
+    margin: 0;    
+  }
+  
+}

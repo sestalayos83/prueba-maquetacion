@@ -63,13 +63,17 @@
     
     Tabs
     Accordion
+    Star
+    Select box
+    Input
 
 --------------------------------------------------------*/
 
-//@import 'blocks/tabs.scss';
-//@import 'blocks/accordion.scss';
-
-
+@import 'blocks/tabs';
+//@import 'blocks/accordion';
+@import 'blocks/star';
+@import 'blocks/select-box';
+@import 'blocks/input';
 
 /*--------------------------------------------------------
 

@@ -1,0 +1,17 @@
+/**
+
+@star
+--------------------------------------------------------*/
+
+
+
+.star {
+	font-size: $font-xxl;
+	margin: 0 2px;
+
+	&--yellow {
+	  @extend .star;
+	  color: $color-yellow;
+	}
+}
+
