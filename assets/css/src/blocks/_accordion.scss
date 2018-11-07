@@ -1,0 +1,77 @@
+/**
+
+@accordion
+--------------------------------------------------------*/
+
+
+
+.accordion {
+  margin: 40px 0;
+
+  &__section {
+    background-color: $color-white;
+    border: 1px solid $color-extra-light-gray-3;
+    margin-bottom: 24px;
+    position: relative;
+
+    &.open {
+      .accordion {
+        &__content {
+          display: block;
+        }
+
+        &__icon {
+          @include transform(rotate(180deg));
+        }
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+  }
+  
+  &__header {
+    @include grid($justify-content: space-between);
+    cursor: pointer;
+    padding: 30px;
+  }
+
+  &__title {
+    @extend %roboto-slab--bold;
+    color: $color-light-blue;
+    font-size: $font-xxxl;
+    line-height: 38px;
+    margin: 0;
+
+    :hover {
+      color: $color-medium-blue;
+    }
+
+    span {
+      margin-left: 20px;
+    }
+  }
+
+  &__icon {
+    @include transition($duration: 0.2s);
+  }
+
+  &__subtitle {
+    background-color: $color-red;
+    color: $color-white;
+    font-size: $font-s;
+    line-height: 14px;
+    letter-spacing: 1.52px;
+    padding: 8px 30px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+  }
+
+  &__content {
+    padding: 0 30px;
+  }
+}
+

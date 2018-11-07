@@ -76,6 +76,11 @@
 --------------------------------------------------------*/
 /*--------------------------------------------------------
 
+@mixin transform
+
+--------------------------------------------------------*/
+/*--------------------------------------------------------
+
 @mixin media
 
 --------------------------------------------------------*/
@@ -194,7 +199,7 @@ h1, h2, h3, .tabs__item {
   font-weight: 400;
   font-style: normal; }
 
-.tabs__title--bold {
+.tabs__title--bold, .accordion__title {
   font-family: "Roboto Slab", sans-serif;
   font-weight: 700;
   font-style: normal; }
@@ -495,6 +500,65 @@ em {
 
 /**
 
+@accordion
+--------------------------------------------------------*/
+.accordion {
+  margin: 40px 0; }
+  .accordion__section {
+    background-color: #FFFFFF;
+    border: 1px solid #DEE1E8;
+    margin-bottom: 24px;
+    position: relative; }
+    .accordion__section.open .accordion__content {
+      display: block; }
+    .accordion__section.open .accordion__icon {
+      -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
+              transform: rotate(180deg); }
+  .accordion__content {
+    display: none; }
+  .accordion__header {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+    padding: 30px; }
+  .accordion__title {
+    color: #4ba7ee;
+    font-size: 24px;
+    line-height: 38px;
+    margin: 0; }
+    .accordion__title :hover {
+      color: #3b95ed; }
+    .accordion__title span {
+      margin-left: 20px; }
+  .accordion__icon {
+    -webkit-transition-duration: 0.2s;
+         -o-transition-duration: 0.2s;
+            transition-duration: 0.2s; }
+  .accordion__subtitle {
+    background-color: #e82e34;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 1.52px;
+    padding: 8px 30px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    top: 0; }
+  .accordion__content {
+    padding: 0 30px; }
+
+/**
+
 @star
 --------------------------------------------------------*/
 .star, .star--yellow {
@@ -614,9 +678,9 @@ em {
 --------------------------------------------------------*/
 input[type=radio],
 .radio__input {
-  -webkit-transition-delay: 0.2s;
-       -o-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  -webkit-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
   -webkit-appearance: none;
   border: 1px solid #8B9199;
   background: #FFFFFF;
