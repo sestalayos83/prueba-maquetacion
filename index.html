@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xml:lang="es" lang="es" class="not-ie no-js">
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="content-type" charset="utf-8">
   <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><![endif]-->
 
   <title>Prueba Maquetación The Cocktail - Soraya Estalayo</title>
 
-  <meta name="description" content="META_DESCRIPCION_DEL_PROYECTO_160">
-  <meta name="keywords" content="archives, information management, public administration">
+  <meta name="description" content="Prueba Maquetación The Cocktail">
+  <meta name="keywords" content="">
 
   <!-- RESPONSIVE -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -17,17 +17,218 @@
 
 
   <!--CSS-->
-  <link rel="stylesheet" href="assets/css/application.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/application.css">
 </head>
 <body>
 
 
 <div class="row">
   <div class="wrapper">
+    
+    <!-- Tabs -->
+    <section class="tabs">
+
+      <!-- Tabs Nav -->
+      <nav class="tabs__nav">
+        <ul class="grid">
+          <li>
+            <a class="tabs__item active" href="#"> Tab 1 </a>
+          </li>
+          <li>
+            <a class="tabs__item" href="#"> Tab 2 </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- Tabs Nav End -->
+
+      <article class="tabs__content active">
+
+        <!-- Tabs Title -->
+        <div class="tabs__title grid">
+          <h1><span class="tabs__title--uppercase">Hotel</span> <span class="tabs__title--bold">Mieres del Camín Apartamentos</span></h1>
+          
+          <!-- Stars -->
+          <div class="grid">
+            <span class="star--yellow">&#9733;</span>
+            <span class="star--yellow">&#9733;</span>
+            <span class="star--yellow">&#9733;</span>
+            <span class="star--yellow">&#9733;</span>
+            <span class="star--yellow">&#9733;</span>
+          </div>
+          <!-- Stars End -->
+
+        </div>
+        <!-- Tabs Title End -->
+
+        <!-- Select Boxes -->
+        <div class="grid padding-r-2 padding-l-2">
+          
+          <!-- 1 -->
+          <div class="select-box">
+
+            <input name="radios" class="select-box__input" id="box1" type="radio" value="Elegir régimen" />
+            <label for="box1" class="select-box__container">  
+              <div class="select-box__content">
+                <h2 class="select-box__title">Sólo Alojamiento</h2>
+
+                <ul class="select-box__list">
+                  <li class="select-box__item"><span>Sin régimen</span></li>
+                  <li class="select-box__item"><span>Botella de agua de bienvenida</span></li>
+                </ul>
+              </div>
+
+              <div class="select-box__button">
+                <label class="select-box__label">Elegir régimen</label>
+              </div>
+            </label>
+
+          </div>
+          <!-- 1 End -->
+
+          <!-- 2 -->
+          <div class="select-box">
+
+            <input name="radios" class="select-box__input" id="box2" type="radio" value="Elegir régimen" />
+            <label for="box2" class="select-box__container">              
+              <div class="select-box__content">  
+                <h2 class="select-box__title">Alojamiento y Desayuno</h2>
+
+                <ul class="select-box__list">
+                  <li class="select-box__item"><span>Desayuno buffet completo</span></li>
+                </ul>
+              </div>
+
+              <div class="select-box__button">
+                <label class="select-box__label">Elegir régimen</label>
+              </div>
+            </label>
+
+          </div>
+          <!-- 2 End -->
+
+          <!-- 3 -->
+          <div class="select-box">
+              
+            <input name="radios" class="select-box__input" id="box3" type="radio" value="Elegir régimen" />
+            <label for="box3" class="select-box__container"> 
+              <div class="select-box__content">
+                <h2 class="select-box__title">Media Pensión</h2>
+
+                <ul class="select-box__list">
+                  <li class="select-box__item"><span>Desayuno buffet completo</span></li>
+                  <li class="select-box__item"><span>Cena buffet</span></li>
+                  <li class="select-box__item"><span>No incluye</span></li>
+                </ul>
+              </div>
+
+              <div class="select-box__button">
+                <label  class="select-box__label">Elegir régimen</label>
+              </div>
+            </label>
+
+          </div>
+          <!-- 3 End -->
+
+          <!-- 4 -->
+          <div class="select-box">
+              
+            <input name="radios" class="select-box__input" id="box4" type="radio" value="Elegir régimen" />
+            <label for="box4" class="select-box__container"> 
+              <div class="select-box__content">
+                <h2 class="select-box__title">Todo incluido</h2>
+
+                <ul class="select-box__list">
+                  <li class="select-box__item"><span>Dispondrás de comida y bebida todo el día y durante toda tu estancia</span></li>
+                  <li class="select-box__item"><span>Restaurante buffet</span></li>
+                  <li class="select-box__item"><span>Snack Bar</span></li>
+                  <li class="select-box__item"><span>Servicio de bares (marcas nacionales)</span></li>
+                </ul>
+              </div>
+
+              <div class="select-box__button">
+                <label class="select-box__label">Elegir régimen</label>
+              </div>
+
+          </div>
+          <!-- 4 End -->
+
+          <!-- 5 -->
+          <div class="select-box">
+            <input name="radios" class="select-box__input" id="box5" type="radio" value="Elegir régimen" />
+            <label for="box5" class="select-box__container">            
+              <div class="select-box__content">
+                <h2 class="select-box__title">Unlimited Services</h2>
+
+                <ul class="select-box__list">
+                  <li class="select-box__item"><span>Restaurante buffet con bebidas Premium</span></li>
+                  <li class="select-box__item"><span>Restaurante a la carta (una cena por estancia)</span></li>
+                  <li class="select-box__item"><span>Snack Bar con bebidas Premium</span></li>
+                  <li class="select-box__item"><span>Minibar incluido</span></li>
+                  <li class="select-box__item"><span>Acceso a SPA y 45 minutos de masaje por persona</span></li>
+                  <li class="select-box__item"><span>Actividades deportivas (acuáticas sin motor)</span></li>
+                  <li class="select-box__item"><span>Caja fuerte</span></li>
+                  <li class="select-box__item"><span>Parking gratuito</span></li>
+                  <li class="select-box__item"><span>Lavandería</span></li>
+                </ul>
+              </div>
+
+              <div class="select-box__button">
+                <input name="radios" class="select-box__input" id="box1" type="radio" value="Elegir régimen" />
+                <label for="box1" class="select-box__label">Elegir régimen</label>
+              </div>
+            </label>
+
+          </div>
+          <!-- 5 End -->
+          
+        </div>
+        <!-- Select Boxes End -->
+
+      </article>
+
+      <article class="tabs__content">
+
+        <ul class="accordion">
+          <li class="accordion__section open">
+            <div class="title">
+              <h5>Panel 1</h5>
+            </div>
+            <div class="accordion__content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </li>
+
+          <li class="accordion__section">
+            <div class="title">
+              <h5>Panel 2</h5>
+            </div>
+            <div class="accordion__content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </li>
+
+          <li class="accordion__section">
+            <div class="title">
+              <h5>Panel 3</h5>
+            </div>
+            <div class="accordion__content">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+          </li>
+        </ul>
+      </article>
+    </section>
   </div>
 </div>
 
 
-<script src="assets/js/application.js"></script>
+<script src="assets/js/src/lib/jquery-2.2.4.min.js"></script>
+<script src="assets/js/src/application.js"></script>
+<script src="assets/js/src/blocks/tabs.js"></script>
+<script src="assets/js/src/blocks/accordion.js"></script>
+
 </body>
 </html>
