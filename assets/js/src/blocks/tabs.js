@@ -2,7 +2,7 @@ $(document).ready(function () {
   var tabs = $('.tabs__item');
   var contents = $('.tabs__content');
 
-  function activarTabOnClick(tab,content){
+  function activeTabOnClick(tab,content){
     tab = $(tab);
     content = $(content);
 
@@ -16,8 +16,7 @@ $(document).ready(function () {
   }
 
   for(var i = 0; i < tabs.length; i++){
-    console.log(tabs[i]);
-    activarTabOnClick(tabs[i],contents[i]);
+    activeTabOnClick(tabs[i],contents[i]);
   }
 });
 
