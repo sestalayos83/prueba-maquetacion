@@ -12,7 +12,7 @@
     background-color: $color-white;
     box-shadow: 0px 1px 2px 0px rgba(80,92,119,0.2);
     position: relative;
-    z-index: 2;
+    z-index: 100;
 
     .grid {
       @include grid($justify-content: flex-end);
@@ -44,13 +44,19 @@
     @include transition($duration: 0.2s);
     background-color: $color-extra-light-gray-2;
     border-radius: 2px;
-    box-shadow: 0px 1px 2px 0px rgba(80,92,119,0.2);
     height: 0;
     opacity: 0;
+    overflow: hidden;
+
+    &:first-of-type {
+      box-shadow: 0px 1px 2px 0px rgba(80,92,119,0.2);
+    }
 
     &.active {
       height: auto;
       opacity: 1;
+      position: relative;
+      z-index: 10;
     }
   }
 
