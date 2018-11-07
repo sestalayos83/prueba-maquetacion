@@ -7,7 +7,7 @@
 
 input[type=radio],
 .radio__input {
-  @include transition(0.2s);
+  @include transition($duration: 0.2s);
   -webkit-appearance: none;
   border: 1px solid $color-extra-light-gray-5;
   background: $color-white;
