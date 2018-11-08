@@ -8,6 +8,7 @@
 .accordion {
   margin: 40px 0;
 
+  // Accorcion Section
   &__section {
     background-color: $color-white;
     border: 1px solid $color-extra-light-gray-3;
@@ -17,7 +18,10 @@
     &.open {
       .accordion {
         &__content {
-          display: block;
+          max-height: 1000px;
+          position: relative;
+          z-index: 10;
+          transition-duration: 2s;
         }
 
         &__icon {
@@ -27,16 +31,24 @@
     }
   }
 
+  // Accorcion Content
   &__content {
-    display: none;
+    display: block;
+    padding: 0 30px;
+    transition-duration: 0.5s;
+    max-height: 0;
+    overflow: hidden;
+
   }
-  
+
+  // Accorcion Header  
   &__header {
     @include grid($justify-content: space-between);
     cursor: pointer;
     padding: 30px;
   }
 
+  // Accorcion Title
   &__title {
     @extend %roboto-slab--bold;
     color: $color-light-blue;
@@ -53,10 +65,13 @@
     }
   }
 
+  // Accorcion Icon
   &__icon {
     @include transition($duration: 0.2s);
+    width: 18px;
   }
 
+  // Accorcion Subtitle
   &__subtitle {
     background-color: $color-red;
     color: $color-white;
@@ -68,10 +83,6 @@
     right: 0;
     text-transform: uppercase;
     top: 0;
-  }
-
-  &__content {
-    padding: 0 30px;
   }
 }
 

@@ -19,6 +19,7 @@
     }
   }
 
+  // Tabs Item
   &__item {
     @extend %roboto-slab;
     @include transition($duration: 0.2s);
