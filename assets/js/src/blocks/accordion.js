@@ -4,11 +4,8 @@ $(document).ready(function () {
 
   function openAccordion(section, content){
     $(section).click(function(){
-        contents.stop().slideUp('slow');
-        $(content).stop().slideDown('slow',function(){
-            sections.removeClass('open');
-            $(section).addClass('open');
-        });
+        sections.removeClass('open');
+        $(section).addClass('open'); 
     });
   }
 
