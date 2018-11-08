@@ -5,13 +5,22 @@
 
 
 
-.star {
-	font-size: $font-xxl;
-	margin: 0 2px;
+.stars__container {
+  @include grid();
 
-	&--yellow {
-	  @extend .star;
-	  color: $color-yellow;
-	}
+  @include media($mobile) {
+    @include grid ($justify-content: center);
+    width: 100%;
+  }
+
+}
+.star {
+  font-size: $font-xxl;
+  margin: 0 2px;
+
+  &--yellow {
+    @extend .star;
+    color: $color-yellow;
+  }
 }
 

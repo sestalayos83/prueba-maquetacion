@@ -5,9 +5,22 @@
 
 
 
+.select-boxes__container {
+  @include grid;
+  padding: 0 12px;
+
+  @include media($tablet) {
+    @include grid ($flex-direction: column);
+  }
+}
+
 .select-box {
   @include grid();
   @include grid-col($gutter: 12px, $flex-basis: 100%);
+
+    @include media($tablet) {
+      @include grid-col($flex-basis: auto);
+    }
   
   // Select-box Container
   &__container {
@@ -17,7 +30,17 @@
     background-color: $color-white;
     border-radius: 2px;
     cursor: pointer;
+    overflow: hidden;
     padding: 20px 18px;
+
+    @include media($tablet) {
+      @include grid($flex-direction: row);
+      @include grid-col($flex-grow: 1);
+    }
+
+    @include media($mobile) {
+      @include grid($flex-direction: column);
+    }
 
     &:hover {
       border-color: $color-medium-blue-2;
@@ -45,6 +68,16 @@
   // Select-box Content
   &__content {
     margin-bottom: 45px;
+
+    @include media($tablet) {
+      @include grid-col($flex-grow: 1);
+      margin-bottom: 0;
+      padding-right: 20px;
+    }
+    @include media($mobile) {
+      margin-bottom: 20px;
+      padding-right: 0;
+    }
   }  
 
   // Select-box Title
@@ -57,6 +90,18 @@
     position: relative;
     text-align: center;
 
+    @include media($tablet) {
+      padding-bottom: 20px;
+      padding-top: 10px;
+      text-align: left;    
+    }
+
+    @include media($mobile) {
+      padding-top: 0;
+      text-align: center;
+      text-transform: uppercase
+    }    
+
     &::before {
       content: '';
       background-color: $color-extra-light-blue;
@@ -66,6 +111,12 @@
       margin-left: -36px;
       position: absolute;
       width: 72px;
+
+      @include media($tablet) {
+        left: 0;
+        margin-left: 0;
+        width: 100%;
+      }
     }
   }
 
@@ -74,6 +125,10 @@
     color: $color-extra-light-gray-4;
     list-style-type: disc;
     padding-left: 5px;
+
+    @include media($tablet) {
+      margin-left: 10px;
+    }
 
     span {
       color: $color-extra-dark-blue;
@@ -91,6 +146,15 @@
     border: 1px solid transparent;
     margin-top: auto;
     padding: 14px;
+
+    @include media($tablet) {
+      margin-top: 0;
+      margin-bottom: auto;
+    }
+
+    @include media($mobile) {
+      @include grid($justify-content: center);
+    }
 
     .radio__label {
       @include transition($duration: 0.2s);

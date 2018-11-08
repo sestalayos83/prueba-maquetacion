@@ -26,14 +26,26 @@
   // Media-object Content
   &__content {
     @include grid();
+
+    @include media($mobile) {
+      @include grid($flex-direction: column);
+    }
   }
 
   // Media-object image
   &__image {
     margin-right: 28px;
 
+    @include media($mobile) {
+      margin-right: 0;
+    }
+
     img {
       display: block;
+
+      @include media($mobile) {
+        width: 100%;
+      }
     }
   }
 
@@ -41,6 +53,10 @@
   &__info {
     @include grid($flex-direction: column);
     padding: 18px 0;
+
+    @include media($mobile) {
+      padding: 20px;
+    }
   }
 
   // Media-object title
@@ -78,6 +94,14 @@
     display: none;
     padding: 20px 80px;
 
+    @include media($tablet) {
+      padding: 20px;
+    }
+
+    @include media($mobile) {
+      padding: 0 20px 20px 20px;
+    }
+
     &.open {
       display: block;
 
@@ -98,6 +122,11 @@
   &__list {
     @include grid();
     margin-bottom: 30px;
+
+    @include media($mobile) {
+      @include grid($flex-direction: column);
+      margin-bottom: 20px;
+    }
   }
 
   //Media-object item
